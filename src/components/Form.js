@@ -4,14 +4,14 @@ const Form = () => {
 
     let [data, setData] = useState({name: "", email: "", password: ""})
 
-    function handleChange(event, info){
+    function handleChange(event){
         event.preventDefault();
-        console.log(info)
+        console.log(data)
     }
 
     return(
         <div>
-            <form onSubmit={handleChange(event, info)}>
+            <form onSubmit={handleChange}>
                 <div>
                     <label htmlFor="name">Name</label>
                     <input type="text" id="name" onChange={(event) => setData({...data, name : event.target.value})}></input>
